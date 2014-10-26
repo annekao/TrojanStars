@@ -313,3 +313,11 @@ function initialize(){
 document.addEventListener('DOMContentLoaded', function () { 
   initialize();
 });
+
+
+
+/*Add this to popup.js
+var b = localStorage['bing'];
+var ask = localStorage['ask'];
+var eon = localStorage['eonline'];
+var v = localStorage['variety'];*/
