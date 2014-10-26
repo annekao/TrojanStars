@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "LifeMeter",
+  "description": "This extension makes your web browsing into a game!  Time spent on different types of website is recorded in points which can be viewed for analysis.",
+  "version": "1.0",
+
+  "permissions": [
+    "https://secure.flickr.com/"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
