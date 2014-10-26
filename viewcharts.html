@@ -19,7 +19,11 @@
 
 	<script>
 
+	//These are temporary data for each user! Same order as categories array
+	var userdata = [28,48,40,19,96,27,100,101];
+
 	var categories = ["Social Butterfly", "Scholar", "Informed", "Shopaholic", "Entertainment Junkie", "Businessman", "Inquisitive", "Miscellaneous"];
+	
 	var radarChartData = {
 		labels: categories,
 		datasets: [
@@ -31,7 +35,7 @@
 				pointStrokeColor: "#fff",
 				pointHighlightFill: "#fff",
 				pointHighlightStroke: "rgba(151,187,205,1)",
-				data: [28,48,40,19,96,27,100,101]
+				data: userdata
 			}
 		]
 	};
@@ -44,56 +48,56 @@
 				strokeColor : "rgba(200,205,205,0.8)",
 				highlightFill : "rgba(151,187,205,0.75)",
 				highlightStroke : "rgba(151,187,205,1)",
-				data : [28,48,40,19,96,27,100,101]
+				data : userdata
 			}
 		]
 	};
 
 	var doughnutData = [
 				{
-					value: 300,
+					value: userdata[0],
 					color:"#8B0000",
 					highlight: "#DC143C",
 					label: categories[0]
 				},
 				{
-					value: 50,
+					value: userdata[1],
 					color: "#FF8C00",
 					highlight: "#E9967A",
 					label: categories[1]
 				},
 				{
-					value: 100,
+					value: userdata[2],
 					color: "#DAA520",
 					highlight: "#FFD700",
 					label: categories[2]
 				},
 				{
-					value: 40,
+					value: userdata[3],
 					color: "#949FB1",
 					highlight: "#FFFAFA",
 					label: categories[3]
 				},
 				{
-					value: 120,
+					value: userdata[4],
 					color: "#008000",
 					highlight: "#ADFF2F",
 					label: categories[4]
 				},
 				{
-					value: 120,
+					value: userdata[5],
 					color: "#0000CD",
 					highlight: "#66CDAA",
 					label: categories[5]
 				},
 				{
-					value: 120,
+					value: userdata[6],
 					color: "#191970",
 					highlight: "#87CEFA",
 					label: categories[6]
 				},
 				{
-					value: 120,
+					value: userdata[7],
 					color: "#7B68EE",
 					highlight: "#9370DB",
 					label: categories[7]
