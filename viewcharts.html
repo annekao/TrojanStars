@@ -9,109 +9,23 @@
 		</style>
 	</head>
 	<body>
-		<div style="width:50%">
+		
+
+	<script src = "popup.js"></script>
+	<script src = "data.js"></script>
+
+		<div style=width = "500" height = "500">
 			<canvas id="canvas" height="450" width="450"> </canvas>	
 		</div>
-		<div style = "width: 50%">
+
+		<div style=width = "500" height = "500">
 			<canvas id="canvas2" height="450" width="600"> </canvas>
+		</div>
+
+		<div style=width = "500" height = "500">
 			<canvas id="canvas3" width="200" height="200"> </canvas>
 		</div>
 
-	<script>
 
-	//These are temporary data for each user! Same order as categories array
-	var userdata = [28,48,40,19,96,27,100,101];
-
-	var categories = ["Social Butterfly", "Scholar", "Informed", "Shopaholic", "Entertainment Junkie", "Businessman", "Inquisitive", "Miscellaneous"];
-	
-	var radarChartData = {
-		labels: categories,
-		datasets: [
-			{
-				label: "My First dataset",
-				fillColor: "rgba(151,187,205,0.2)",
-				strokeColor: "rgba(151,187,205,1)",
-				pointColor: "rgba(151,187,205,1)",
-				pointStrokeColor: "#fff",
-				pointHighlightFill: "#fff",
-				pointHighlightStroke: "rgba(151,187,205,1)",
-				data: userdata
-			}
-		]
-	};
-
-	var barChartData = {
-		labels : categories,
-		datasets : [
-			{
-				fillColor : "rgba(200,150,250,0.5)",
-				strokeColor : "rgba(200,205,205,0.8)",
-				highlightFill : "rgba(151,187,205,0.75)",
-				highlightStroke : "rgba(151,187,205,1)",
-				data : userdata
-			}
-		]
-	};
-
-	var doughnutData = [
-				{
-					value: userdata[0],
-					color:"#8B0000",
-					highlight: "#DC143C",
-					label: categories[0]
-				},
-				{
-					value: userdata[1],
-					color: "#FF8C00",
-					highlight: "#E9967A",
-					label: categories[1]
-				},
-				{
-					value: userdata[2],
-					color: "#DAA520",
-					highlight: "#FFD700",
-					label: categories[2]
-				},
-				{
-					value: userdata[3],
-					color: "#949FB1",
-					highlight: "#FFFAFA",
-					label: categories[3]
-				},
-				{
-					value: userdata[4],
-					color: "#008000",
-					highlight: "#ADFF2F",
-					label: categories[4]
-				},
-				{
-					value: userdata[5],
-					color: "#0000CD",
-					highlight: "#66CDAA",
-					label: categories[5]
-				},
-				{
-					value: userdata[6],
-					color: "#191970",
-					highlight: "#87CEFA",
-					label: categories[6]
-				},
-				{
-					value: userdata[7],
-					color: "#7B68EE",
-					highlight: "#9370DB",
-					label: categories[7]
-				}
-			];
-
-	window.onload = function(){
-		window.myRadar = new Chart(document.getElementById("canvas").getContext("2d")).Radar(radarChartData, {responsive: true});
-		window.myBar = new Chart(document.getElementById("canvas2").getContext("2d")).Bar(barChartData, {responsive : true});
-		window.myDoughnut = new Chart(document.getElementById("canvas3").getContext("2d")).Doughnut(doughnutData, {responsive : true});
-	};
-
-	//To add segments: canvas.onclick = function(evt){var active Points = myDoughnutChart.getSegmentsAtEvent(evt);};
-
-	</script>
 	</body>
 </html>

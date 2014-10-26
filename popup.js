@@ -1,6 +1,7 @@
+
 document.addEventListener('DOMContentLoaded', function () { 
     var sites = JSON.stringify(localStorage.sites);
-    console.log(sites);
+    
 
     var t = localStorage['twitter'];
     var f = localStorage['facebook'];
@@ -23,11 +24,19 @@ document.addEventListener('DOMContentLoaded', function () {
     var goog = localStorage['google'];
     var yah = localStorage['yahoo'];
 
+    socialButterfly = parseInt(t) + parseInt(f) + parseInt(i);
+    academic = parseInt(edu) + parseInt(p) + parseInt(w);
+    currentEvents = parseInt(wsj) + parseInt(lat) + parseInt(bbc);
+    shopaholic = parseInt(a) + parseInt(e) + parseInt(g);
+    entertainmentJunkie = parseInt(n) + parseInt(y) + parseInt(h);
+    business = parseInt(c) + parseInt(l) + parseInt(forb);
+    inquisitive = parseInt(goog) + parseInt(yah);
+
 
 	// for(int i = 0; i++; i < sites.length){
 	// 	document.getElementById("stats").append(".");
 	// }
-	document.getElementById("stats").innerHTML = 
+	/*document.getElementById("stats").innerHTML = 
 		"TWTR: " + t + "<br>" + 
 		"FB: " + f + "<br>" + 
 		"INSTA: " + i + "<br>" + 
@@ -47,8 +56,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		"LINKD: " + l + "<br>" + 
 		"FORB: " + forb + "<br>" + 
 		"GOOG: " + goog + "<br>" + 
-		"YHOO: " + yah + "<br>" ;
+		"YHOO: " + yah + "<br>" ;*/
 
 
 });
-g
+
+
