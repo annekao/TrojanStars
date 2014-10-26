@@ -265,13 +265,15 @@ function initialize(){
 
   chrome.windows.onFocusChanged.addListener(
     function(windowId) {
-      // console.log("Detected window focus changed.");
-      chrome.tabs.getSelected(windowId,
-        function(tab) {
-          // console.log("Window/Tab changed");
-          currentTabId = tab.id;
-          updateCounter();
-        });
+    	if(windowId != null){
+      		// console.log("Detected window focus changed.");
+      		chrome.tabs.getSelected(windowId,
+	        	function(tab) {
+	         	// console.log("Window/Tab changed");
+	        	currentTabId = tab.id;
+	        	updateCounter();
+        	});
+  		}
     });
 
 }
