@@ -14,6 +14,7 @@ function getSiteFromUrl(url) {
 }
 
 function updateTime(site, seconds) {
+  // SOCIAL 
   var loc = site.indexOf('twitter.com');
   if(loc != -1){
     var val = parseInt(localStorage['twitter']) + parseInt(seconds);
@@ -25,6 +26,121 @@ function updateTime(site, seconds) {
     var val = parseInt(localStorage['facebook']) + parseInt(seconds);
     localStorage['facebook'] = val;
   }
+
+  loc = site.indexOf('instagram.com');
+  if(loc != -1){
+    var val = parseInt(localStorage['instagram']) + parseInt(seconds);
+    localStorage['instagram'] = val;
+  }
+
+  // ACADEMIC
+  loc = site.indexOf('.edu');
+  if(loc != -1){
+    var val = parseInt(localStorage['.edu']) + parseInt(seconds);
+    localStorage['.edu'] = val;
+  }
+
+  loc = site.indexOf('piazza.com');
+  if(loc != -1){
+    var val = parseInt(localStorage['piazza']) + parseInt(seconds);
+    localStorage['piazza'] = val;
+  }
+
+  loc = site.indexOf('wikipedia.org');
+  if(loc != -1){
+    var val = parseInt(localStorage['wikipedia']) + parseInt(seconds);
+    localStorage['wikipedia'] = val;
+  }
+
+  // NEWS
+  loc = site.indexOf('wsj.com');
+  if(loc != -1){
+    var val = parseInt(localStorage['WSJ']) + parseInt(seconds);
+    localStorage['WSJ'] = val;
+  }
+
+  loc = site.indexOf('latimes.com');
+  if(loc != -1){
+    var val = parseInt(localStorage['LATimes']) + parseInt(seconds);
+    localStorage['LATimes'] = val;
+  }
+
+  loc = site.indexOf('bbc.com');
+  if(loc != -1){
+    var val = parseInt(localStorage['BBC']) + parseInt(seconds);
+    localStorage['BBC'] = val;
+  }
+
+  // SHOPPING
+  loc = site.indexOf('amazon.com');
+  if(loc != -1){
+    var val = parseInt(localStorage['amazon']) + parseInt(seconds);
+    localStorage['amazon'] = val;
+  }
+
+  loc = site.indexOf('ebay.com');
+  if(loc != -1){
+    var val = parseInt(localStorage['ebay']) + parseInt(seconds);
+    localStorage['ebay'] = val;
+  }
+
+  loc = site.indexOf('gap.com');
+  if(loc != -1){
+    var val = parseInt(localStorage['gap']) + parseInt(seconds);
+    localStorage['gap'] = val;
+  }
+
+  // ENTERTAINMENT JUNKIE 
+  loc = site.indexOf('netflix.com');
+  if(loc != -1){
+    var val = parseInt(localStorage['netflix']) + parseInt(seconds);
+    localStorage['netflix'] = val;
+  }
+
+  loc = site.indexOf('youtube.com');
+  if(loc != -1){
+    var val = parseInt(localStorage['youtube']) + parseInt(seconds);
+    localStorage['youtube'] = val;
+  }
+
+  loc = site.indexOf('hulu.com');
+  if(loc != -1){
+    var val = parseInt(localStorage['hulu']) + parseInt(seconds);
+    localStorage['hulu'] = val;
+  }
+
+  // BUSINESS
+  loc = site.indexOf('chase.com');
+  if(loc != -1){
+    var val = parseInt(localStorage['chase']) + parseInt(seconds);
+    localStorage['chase'] = val;
+  }
+
+  loc = site.indexOf('linkedin.com');
+  if(loc != -1){
+    var val = parseInt(localStorage['linkedin']) + parseInt(seconds);
+    localStorage['linkedin'] = val;
+  }
+
+  loc = site.indexOf('forbes.com');
+  if(loc != -1){
+    var val = parseInt(localStorage['forbes']) + parseInt(seconds);
+    localStorage['forbes'] = val;
+  }
+
+  // INQUISITIVE
+  loc = site.indexOf('google.com');
+  if(loc != -1){
+    var val = parseInt(localStorage['google']) + parseInt(seconds);
+    localStorage['google'] = val;
+  }
+
+  loc = site.indexOf('yahoo.com');
+  if(loc != -1){
+    var val = parseInt(localStorage['yahoo']) + parseInt(seconds);
+    localStorage['yahoo'] = val;
+  }
+
   console.log("Time: " + seconds);
   // var sites = JSON.parse(localStorage.sites);
   // if (!sites[site]) {
@@ -79,8 +195,66 @@ function initialize(){
   if (!localStorage.sites) {
     localStorage.sites = JSON.stringify({});
   }
-  localStorage['twitter'] = 0;
-  localStorage['facebook']=0;
+  if (localStorage['twitter'] == null){
+    localStorage['twitter'] = 0;
+  }
+  if (localStorage['facebook'] == null){
+    localStorage['facebook']=0;
+  }
+  if (localStorage['instagram'] == null){
+    localStorage['instagram'] = 0;
+  }
+  if (localStorage['.edu'] == null){
+    localStorage['.edu']=0;
+  }
+  if (localStorage['piazza'] == null){
+    localStorage['piazza'] = 0;
+  }
+  if (localStorage['wikipedia'] == null){
+    localStorage['wikipedia']=0;
+  }
+  if (localStorage['wsj'] == null){
+    localStorage['wsj'] = 0;
+  }
+  if (localStorage['LATimes'] == null){
+    localStorage['LATimes']=0;
+  }
+  if (localStorage['BBC'] == null){
+    localStorage['BBC'] = 0;
+  }
+  if (localStorage['amazon'] == null){
+    localStorage['amazon']=0;
+  }
+  if (localStorage['ebay'] == null){
+    localStorage['ebay'] = 0;
+  }
+  if (localStorage['gap'] == null){
+    localStorage['gap']=0;
+  }
+  if (localStorage['netflix'] == null){
+    localStorage['netflix'] = 0;
+  }
+  if (localStorage['youtube'] == null){
+    localStorage['youtube']=0;
+  }
+  if (localStorage['hulu'] == null){
+    localStorage['hulu'] = 0;
+  }
+  if (localStorage['chase'] == null){
+    localStorage['chase']=0;
+  }
+  if (localStorage['linkedin'] == null){
+    localStorage['linkedin'] = 0;
+  }
+  if (localStorage['forbes'] == null){
+    localStorage['forbes']=0;
+  }
+  if (localStorage['google'] == null){
+    localStorage['google'] = 0;
+  }
+  if (localStorage['yahoo'] == null){
+    localStorage['yahoo']=0;
+}
 
   chrome.tabs.onActivated.addListener(
     function(tab) {
