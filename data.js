@@ -1,3 +1,16 @@
+document.addEventListener('DOMContentLoaded', function (){
+	var userdata = [parseInt(localStorage['twitter']) + parseInt(localStorage['facebook']) + parseInt(localStorage['instagram']), 
+					parseInt(localStorage['.edu']) + parseInt(localStorage['piazza']) + parseInt(localStorage['wikipedia']), 
+					parseInt(localStorage['wsj']) + parseInt(localStorage['latimes']) + parseInt(localStorage['bbc']), 
+					parseInt(localStorage['amazon']) + parseInt(localStorage['ebay']) + parseInt(localStorage['gap']), 
+					parseInt(localStorage['netflix']) + parseInt(localStorage['youtube']) + parseInt(localStorage['hulu']), 
+					parseInt(localStorage['chase']) + parseInt(localStorage['linkedin']) + parseInt(localStorage['forbes']), 
+					parseInt(localStorage['google']) + parseInt(localStorage['yahoo']) ];
+
+});
+
+
+
 //These are temporary data for each user! Same order as categories array
 	var userdata = [parseInt(localStorage['twitter']) + parseInt(localStorage['facebook']) + parseInt(localStorage['instagram']), 
 					parseInt(localStorage['.edu']) + parseInt(localStorage['piazza']) + parseInt(localStorage['wikipedia']), 
