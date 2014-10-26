@@ -1,31 +1,80 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Life Meter</title>
-    <style>
-      body {
-        min-width: 357px;
-        overflow-x: hidden;
-      }
+<head>
 
-      img {
-        margin: 5px;
-        border: 2px solid black;
-        vertical-align: middle;
-        width: 75px;
-        height: 75px;
-      }
-    </style>
+<meta charset=utf-8 />
+<title>JS Bin</title>
+<style>
+  .stopwatch {
+    display: inline-block;
+    background-color: white;
+    border: 1px solid #eee;
+    padding: 5px;
+    margin: 5px;
+  }
+  .stopwatch span {
+    font-weight: bold;
+    display: block;
+  }
+  .stopwatch a {
+    padding-right: 5px;
+    text-decoration: none;
+  }
+</style>
 
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
-     -->
-    <script src="popup.js"></script>
-  </head>
-  <body>
-  </body>
+
+
+</head>
+<body>
+<h2>Basic example; update every 1 ms</h2>
+  
+<p>click <code>start</code> to start a stopwatch</p>
+  
+<pre>
+var elems = document.getElementsByClassName("basic");
+  
+for (var i=0, len=elems.length; i&lt;len; i++) {
+  new Stopwatch(elems[i]);
+}
+</pre>
+<div class="basic stopwatch"></div>
+<div class="basic stopwatch"></div>
+
+<hr>
+<h2>Programmatic example</h2>
+
+<p><strong>Note:</strong> despite the varying <code>delay</code> settings, each stopwatch displays the correct time (in seconds)</p>
+
+<pre>
+var a = document.getElementById("a-timer");
+aTimer = new Stopwatch(a);
+aTimer.start();
+</pre>
+<div class="stopwatch" id="a-timer"></div>1 ms<br>
+  
+<pre>
+var b = document.getElementById("b-timer");
+bTimer = new Stopwatch(b, {delay: 100});
+bTimer.start();
+</pre>
+<div class="stopwatch" id="b-timer"></div>100 ms<br>
+
+<pre>
+var c = document.getElementById("c-timer");
+cTimer = new Stopwatch(c, {delay: 456});
+cTimer.start();
+</pre>
+<div class="stopwatch" id="c-timer"></div>456 ms<br>
+  
+<pre>
+var d = document.getElementById("d-timer");
+dTimer = new Stopwatch(d, {delay: 1000});
+dTimer.start();
+</pre>
+<div class="stopwatch" id="d-timer"></div>1000 ms<br>
+  
+</body>
+
+<script src = "jquery.js"></script>
+
 </html>
-
