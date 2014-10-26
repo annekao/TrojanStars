@@ -1,83 +1,54 @@
-// Copyright (c) 2012 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
+document.addEventListener('DOMContentLoaded', function () { 
+    var sites = JSON.stringify(localStorage.sites);
+    console.log(sites);
 
-/**
- * Global variable containing the query we'd like to pass to Flickr. In this
- * case, kittens!
- *
- * @type {string}
- */
-var QUERY = 'kittens';
+    var t = localStorage['twitter'];
+    var f = localStorage['facebook'];
+    var i = localStorage['instagram'];
+    var edu = localStorage['.edu'];
+    var p = localStorage['piazza'];
+    var w = localStorage['wikipedia'];
+    var wsj = localStorage['wsj'];
+    var lat = localStorage['latimes'];
+    var bbc = localStorage['bbc'];
+    var a = localStorage['amazon'];
+    var e = localStorage['ebay'];
+    var g = localStorage['gap'];
+    var n = localStorage['netflix'];
+    var y = localStorage['youtube'];
+    var h = localStorage['hulu'];
+    var c = localStorage['chase'];
+    var l = localStorage['linkedin'];
+    var forb = localStorage['forbes'];
+    var goog = localStorage['google'];
+    var yah = localStorage['yahoo'];
 
-var kittenGenerator = {
-  /**
-   * Flickr URL that will give us lots and lots of whatever we're looking for.
-   *
-   * See http://www.flickr.com/services/api/flickr.photos.search.html for
-   * details about the construction of this URL.
-   *
-   * @type {string}
-   * @private
-   */
-  searchOnFlickr_: 'https://secure.flickr.com/services/rest/?' +
-      'method=flickr.photos.search&' +
-      'api_key=90485e931f687a9b9c2a66bf58a3861a&' +
-      'text=' + encodeURIComponent(QUERY) + '&' +
-      'safe_search=1&' +
-      'content_type=1&' +
-      'sort=interestingness-desc&' +
-      'per_page=20',
 
-  /**
-   * Sends an XHR GET request to grab photos of lots and lots of kittens. The
-   * XHR's 'onload' event is hooks up to the 'showPhotos_' method.
-   *
-   * @public
-   */
-  requestKittens: function() {
-    var req = new XMLHttpRequest();
-    req.open("GET", this.searchOnFlickr_, true);
-    req.onload = this.showPhotos_.bind(this);
-    req.send(null);
-  },
+	// for(int i = 0; i++; i < sites.length){
+	// 	document.getElementById("stats").append(".");
+	// }
+	document.getElementById("stats").innerHTML = 
+		"TWTR: " + t + "<br>" + 
+		"FB: " + f + "<br>" + 
+		"INSTA: " + i + "<br>" + 
+		"EDU: " + edu + "<br>" + 
+		"PIAZ: " + p + "<br>" +
+		"WIKI: " + w + "<br>" + 
+		"WSJ: " + wsj + "<br>" + 
+		"LAT: " + lat + "<br>" + 
+		"BBC: " + bbc + "<br>" +
+		"AMAZ: " + a + "<br>" + 
+		"EBAY: " + e + "<br>" + 
+		"GAP: " + g + "<br>" + 
+		"NF: " + n + "<br>" + 
+		"YT: " + y + "<br>" + 
+		"HULU: " + h + "<br>" + 
+		"CHS: " + c + "<br>" + 
+		"LINKD: " + l + "<br>" + 
+		"FORB: " + forb + "<br>" + 
+		"GOOG: " + goog + "<br>" + 
+		"YHOO: " + yah + "<br>" ;
 
-  /**
-   * Handle the 'onload' event of our kitten XHR request, generated in
-   * 'requestKittens', by generating 'img' elements, and stuffing them into
-   * the document for display.
-   *
-   * @param {ProgressEvent} e The XHR ProgressEvent.
-   * @private
-   */
-  showPhotos_: function (e) {
-    var kittens = e.target.responseXML.querySelectorAll('photo');
-    for (var i = 0; i < kittens.length; i++) {
-      var img = document.createElement('img');
-      img.src = this.constructKittenURL_(kittens[i]);
-      img.setAttribute('alt', kittens[i].getAttribute('title'));
-      document.body.appendChild(img);
-    }
-  },
 
-  /**
-   * Given a photo, construct a URL using the method outlined at
-   * http://www.flickr.com/services/api/misc.urlKittenl
-   *
-   * @param {DOMElement} A kitten.
-   * @return {string} The kitten's URL.
-   * @private
-   */
-  constructKittenURL_: function (photo) {
-    return "http://farm" + photo.getAttribute("farm") +
-        ".static.flickr.com/" + photo.getAttribute("server") +
-        "/" + photo.getAttribute("id") +
-        "_" + photo.getAttribute("secret") +
-        "_s.jpg";
-  }
-};
-
-// Run our kitten generation script as soon as the document's DOM is ready.
-document.addEventListener('DOMContentLoaded', function () {
-  kittenGenerator.requestKittens();
 });
+g

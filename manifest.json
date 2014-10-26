@@ -1,21 +1,22 @@
 {
-  "manifest_version": 2,
+	"manifest_version": 2,
+	"name": "Time Tracker",
+	"version": "0.1",
+	"description": "Keeps track of how much time you spend on various web sites.",
 
-  "name": "LifeMeter",
-  "description": "This extension makes your web browsing into a game!  Time spent on different types of website is recorded in points which can be viewed for analysis.",
-  "version": "1.0",
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": true
+	},
 
-  "permissions": [
-    "activeTab"
-  ],
+	"permissions": [
+		"tabs"
+	],
 
-  "background": {
-    "scripts": ["jquery.js"],
-    "persistent": true
-  },
-
-  "browser_action": {
-    "default_icon": "icon.png",
+	"browser_action": {
+    "default_icon": "lifemeterlogo8080.png",
     "default_popup": "popup.html"
-  }
+	},
+
+	"icons": { "128": "lifemeterlogo8080.png" }
 }
