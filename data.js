@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function (){
+/*document.addEventListener('DOMContentLoaded', function (){
 	var userdata = [parseInt(localStorage['twitter']) + parseInt(localStorage['facebook']) + parseInt(localStorage['instagram']), 
 					parseInt(localStorage['.edu']) + parseInt(localStorage['piazza']) + parseInt(localStorage['wikipedia']), 
 					parseInt(localStorage['wsj']) + parseInt(localStorage['latimes']) + parseInt(localStorage['bbc']), 
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function (){
 					parseInt(localStorage['chase']) + parseInt(localStorage['linkedin']) + parseInt(localStorage['forbes']), 
 					parseInt(localStorage['google']) + parseInt(localStorage['yahoo']) ];
 
-});
+});*/
 
 
 
