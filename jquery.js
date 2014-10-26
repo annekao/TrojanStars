@@ -1,6 +1,7 @@
+
 var Stopwatch = function(elem, options) {
   
-  var timer       = createTimer(),
+  var timer = createTimer(),
       offset,
       clock,
       interval;

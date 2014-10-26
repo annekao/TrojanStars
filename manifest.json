@@ -6,7 +6,8 @@
   "version": "1.0",
 
   "permissions": [
-    "activeTab"
+    "tabs",
+    "storage"
   ],
 
   "background": {
