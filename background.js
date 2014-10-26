@@ -108,6 +108,16 @@ function updateTime(site, seconds) {
     var val = parseInt(localStorage['hulu']) + parseInt(seconds);
     localStorage['hulu'] = val;
   }
+  loc = site.indexOf('eonline.com');
+  if(loc != -1){
+  var val = parseInt(localStorage['eonline']) + parseInt(seconds);
+  localStorage['eonline'] = val;
+  }
+  loc = site.indexOf('variety');
+  if(loc != -1){
+  var val = parseInt(localStorage['variety']) + parseInt(seconds);
+  localStorage['variety'] = val;
+  }
 
   // BUSINESS
   loc = site.indexOf('chase.com');
@@ -139,6 +149,16 @@ function updateTime(site, seconds) {
   if(loc != -1){
     var val = parseInt(localStorage['yahoo']) + parseInt(seconds);
     localStorage['yahoo'] = val;
+  }
+  loc = site.indexOf('bing.com');
+  if(loc != -1){
+  var val = parseInt(localStorage['bing']) + parseInt(seconds);
+  localStorage['bing'] = val;
+  }
+  loc = site.indexOf('ask.com');
+  if(loc != -1){
+  var val = parseInt(localStorage['ask']) + parseInt(seconds);
+  localStorage['ask'] = val;
   }
 
   console.log("Time: " + seconds);
@@ -254,6 +274,18 @@ function initialize(){
   }
   if (localStorage['yahoo'] == null){
     localStorage['yahoo']=0;
+  if (localStorage['bing'] == null){
+  localStorage['bing']=0;
+  }
+  if (localStorage['ask'] == null){
+  localStorage['ask']=0;
+  }
+  if (localStorage['eonline'] == null){
+  localStorage['eonline'] = 0;
+  }
+  if (localStorage['variety'] == null){
+  localStorage['variety'] = 0;
+  }
 }
 
   chrome.tabs.onActivated.addListener(
