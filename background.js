@@ -16,12 +16,14 @@ function getSiteFromUrl(url) {
 function updateTime(site, seconds) {
   var loc = site.indexOf('twitter.com');
   if(loc != -1){
-    localStorage['twitter']+= seconds;
+    var val = parseInt(localStorage['twitter']) + parseInt(seconds);
+    localStorage['twitter'] = val;
   }
 
   loc = site.indexOf('facebook.com');
   if(loc != -1){
-    localStorage['facebook']+= seconds;
+    var val = parseInt(localStorage['facebook']) + parseInt(seconds);
+    localStorage['facebook'] = val;
   }
   console.log("Time: " + seconds);
   // var sites = JSON.parse(localStorage.sites);
