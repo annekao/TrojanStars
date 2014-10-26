@@ -61,14 +61,14 @@ function updateTime(site, seconds) {
 
   loc = site.indexOf('latimes.com');
   if(loc != -1){
-    var val = parseInt(localStorage['LATimes']) + parseInt(seconds);
-    localStorage['LATimes'] = val;
+    var val = parseInt(localStorage['latimes']) + parseInt(seconds);
+    localStorage['latimes'] = val;
   }
 
   loc = site.indexOf('bbc.com');
   if(loc != -1){
-    var val = parseInt(localStorage['BBC']) + parseInt(seconds);
-    localStorage['BBC'] = val;
+    var val = parseInt(localStorage['bbc']) + parseInt(seconds);
+    localStorage['bbc'] = val;
   }
 
   // SHOPPING
@@ -216,11 +216,11 @@ function initialize(){
   if (localStorage['wsj'] == null){
     localStorage['wsj'] = 0;
   }
-  if (localStorage['LATimes'] == null){
-    localStorage['LATimes']=0;
+  if (localStorage['latimes'] == null){
+    localStorage['latimes']=0;
   }
-  if (localStorage['BBC'] == null){
-    localStorage['BBC'] = 0;
+  if (localStorage['bbc'] == null){
+    localStorage['bbc'] = 0;
   }
   if (localStorage['amazon'] == null){
     localStorage['amazon']=0;
