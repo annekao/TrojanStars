@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var p = localStorage['piazza'];
     var w = localStorage['wikipedia'];
     var wsj = localStorage['wsj'];
-    var lat = localStorage['LATimes'];
-    var bbc = localStorage['BBC'];
+    var lat = localStorage['latimes'];
+    var bbc = localStorage['bbc'];
     var a = localStorage['amazon'];
     var e = localStorage['ebay'];
     var g = localStorage['gap'];
@@ -51,3 +51,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 });
+g
