@@ -1,6 +1,6 @@
 //These are temporary data for each user! Same order as categories array
 	var userdata = [parseInt(localStorage['twitter']) + parseInt(localStorage['facebook']), 
-					parseInt(academic), 
+					parseInt(localStorage['']), 
 					parseInt(currentEvents), 
 					parseInt(shopaholic ), 
 					parseInt(entertainmentJunkie ), 
