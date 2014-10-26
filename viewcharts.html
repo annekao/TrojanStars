@@ -51,7 +51,12 @@
 				}
 			]
 		};
-		window.myRadar = new Chart(document.getElementById("canvas").getContext("2d")).Radar(radarChartData, {responsive: true});
+		//window.myRadar = new Chart(document.getElementById("canvas").getContext("2d")).Radar(radarChartData, {responsive: true});
+		var ctx = document.getElementById("myChart").getContext("2d");
+		ctx.canvas.width = 100;
+		ctx.canvas.height = 100;
+		new Chart(ctx).Radar(radarChartData, {responsive:true});
+		break;
 		break;
 
 		case 'Bar':
@@ -67,7 +72,12 @@
 				}
 			]
 		};
-		window.myBar = new Chart(document.getElementById("canvas2").getContext("2d")).Bar(barChartData, {responsive : true});
+		//window.myBar = new Chart(document.getElementById("canvas2").getContext("2d")).Bar(barChartData, {responsive : true});
+		var ctx = document.getElementById("myChart").getContext("2d");
+		ctx.canvas.width = 100;
+		ctx.canvas.height = 100;
+		new Chart(ctx).Bar(barChartData, {responsive:true});
+		break;
 		break;
 
 		case 'Donut':
@@ -121,7 +131,11 @@
 						label: categories[7]
 					}
 				];
-		window.myDoughnut = new Chart(document.getElementById("canvas3").getContext("2d")).Doughnut(doughnutData, {responsive : true});
+		//window.myDoughnut = new Chart(document.getElementById("canvas3").getContext("2d")).Doughnut(doughnutData, {responsive : true});
+		var ctx = document.getElementById("myChart").getContext("2d");
+		ctx.canvas.width = 100;
+		ctx.canvas.height = 100;
+		new Chart(ctx).Doughnut(doughnutData, {responsive:true});
 		break;
 		}
 	}
@@ -134,5 +148,6 @@
             <option>Bar</option>
             <option>Donut</option>
         </select>
+    <canvas id = "myChart" width="100", height = "100"></canvas>
 	</body>
 </html>
