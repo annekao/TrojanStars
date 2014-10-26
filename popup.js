@@ -28,26 +28,26 @@ document.addEventListener('DOMContentLoaded', function () {
 	// 	document.getElementById("stats").append(".");
 	// }
 	document.getElementById("stats").innerHTML = 
-		"TWTR: " + t + "     " + 
-		"FB: " + f + "     " + 
-		"INSTA: " + i + "     " + 
-		"EDU: " + edu + "     " + 
-		"PIAZ: " + p + "     " +
-		"WIKI: " + w + "     " + 
-		"WSJ: " + wsj + "     " + 
-		"LAT: " + lat + "     " + 
-		"BBC: " + bbc + "     " +
-		"AMAZ: " + a + "     " + 
-		"EBAY: " + e + "     " + 
-		"GAP: " + g + "     " + 
-		"NF: " + n + "     " + 
-		"YT: " + y + "     " + 
-		"HULU: " + h + "     " + 
-		"CHS: " + c + "     " + 
-		"LINKD: " + l + "     " + 
-		"FORB: " + forb + "     " + 
-		"GOOG: " + goog + "     " + 
-		"YHOO: " + yah + "     " ;
+		"TWTR: " + t + "<br>" + 
+		"FB: " + f + "<br>" + 
+		"INSTA: " + i + "<br>" + 
+		"EDU: " + edu + "<br>" + 
+		"PIAZ: " + p + "<br>" +
+		"WIKI: " + w + "<br>" + 
+		"WSJ: " + wsj + "<br>" + 
+		"LAT: " + lat + "<br>" + 
+		"BBC: " + bbc + "<br>" +
+		"AMAZ: " + a + "<br>" + 
+		"EBAY: " + e + "<br>" + 
+		"GAP: " + g + "<br>" + 
+		"NF: " + n + "<br>" + 
+		"YT: " + y + "<br>" + 
+		"HULU: " + h + "<br>" + 
+		"CHS: " + c + "<br>" + 
+		"LINKD: " + l + "<br>" + 
+		"FORB: " + forb + "<br>" + 
+		"GOOG: " + goog + "<br>" + 
+		"YHOO: " + yah + "<br>" ;
 
 
 });
