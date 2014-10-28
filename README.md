@@ -1,4 +1,4 @@
-Time Tracker by Team TrojanStars
+![logo](http://s3.amazonaws.com/challengepost/photos/production/solution_photos/000/178/531/datas/xlarge.png?1414348669 =50x50)Time Tracker by Team TrojanStars
 ===========
 
 Time Tracker is a Chrome Extension made by 5 USC students for Trojanhacks-a 24 hour hackathon.  
@@ -16,3 +16,7 @@ The extension is a pop-up that displays time spent in different categories of we
 
 ###Extras
 + charts/graphs
+
+###Screenshots:
+![pie chart](http://s3.amazonaws.com/challengepost/photos/production/solution_photos/000/178/582/datas/xlarge.png?1414349880)
+![radar chart](http://s3.amazonaws.com/challengepost/photos/production/solution_photos/000/178/529/datas/xlarge.png?1414348478)
