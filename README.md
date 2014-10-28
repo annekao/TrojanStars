@@ -1,7 +1,7 @@
-LifeMeter by Team TrojanStars
+Time Tracker by Team TrojanStars
 ===========
 
-LifeMeter is a Chrome Extension made by 5 USC students for Trojanhacks-a 24 hour hackathon.  
+Time Tracker is a Chrome Extension made by 5 USC students for Trojanhacks-a 24 hour hackathon.  
 The extension is a pop-up that displays time spent in different categories of web browsing.  The overall purpose for users is to self-evaluate web browsing produtivity.
 
 ###Categories
